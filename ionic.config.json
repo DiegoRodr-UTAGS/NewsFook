@@ -1,0 +1,13 @@
+{
+  "name": "NewsFokk",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/newsapi",
+      "proxyUrl": "https://newsapi.org/v2/top-headlines?"
+    }
+  ]
+}

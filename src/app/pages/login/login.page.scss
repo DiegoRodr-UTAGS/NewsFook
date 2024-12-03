@@ -1,0 +1,75 @@
+.page-content {
+    --background: linear-gradient(135deg, var(--ion-color-danger), #700015); /* Fondo degradado */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: 100vh; /* Altura total de la pantalla */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .form-wrapper {
+    width: 100%;
+    max-width: 400px; /* Tamaño máximo del formulario */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Sombra */
+    text-align: center;
+    justify-content: center;
+  }
+  
+  ion-item {
+    --background: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    --border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 20px;
+  }
+  
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .separator hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid var(--ion-color-light); /* Línea blanca */
+    margin: 0 10px;
+  }
+  
+  .separator span {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .register-link {
+    color:white; /* Blanco */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .register-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+  }
+  
+  /* Tema oscuro */
+  @media (prefers-color-scheme: dark) {
+      .page-content {
+        background: linear-gradient(135deg, #4a000e, #b00020); /* Fondo degradado oscuro */
+      }
+    
+  
+    .form-wrapper {
+      background: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
+    }
+  
+    .separator hr {
+      border-color: rgba(255, 255, 255, 0.421); /* Línea más tenue */
+    }
+    ion-item{
+        --background: rgba(0, 0, 0, 0.61);
+    }
+  }
+  

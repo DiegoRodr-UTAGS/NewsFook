@@ -1,0 +1,71 @@
+/* home.page.scss */
+:host {
+  --ion-color-danger: #b00020; /* Define el color rojo aquí */
+}
+
+.page-content {
+  --background:linear-gradient(135deg, var(--ion-color-danger), #700015); /* Fondo rojo */
+  color: white; /* Color del texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  position: relative; /* Asegura que el contenido se ajuste al tamaño de la pantalla */
+}
+
+ion-item {
+  --background: var(--ion-background-color); /* Ajusta el fondo para el tema claro */
+  color: var(--ion-text-color); /* Ajusta el texto para el tema claro */
+}
+
+#content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centrado vertical adicional */
+  text-align: center;
+  height: 100%; /* Ocupa todo el espacio del contenedor */
+}
+
+#logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.welcome-text {
+  font-size: 1.5rem;
+  margin: 10px 0 20px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.start-button {
+  --border-color: transparent;
+  --box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3); /* Sombra para resaltar */
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 12px 24px;
+  color: #b00020;
+  font-weight: bold;
+  --background: #ffffff;
+}
+
+/* Tema oscuro */
+:host-context(.dark) .page-content {
+  background: linear-gradient(135deg, #700015, #b00020); /* Gradiente con colores más oscuros en el tema oscuro */
+  color: white;
+}
+
+:host-context(.dark) .start-button {
+  --background: #333; /* Fondo oscuro para el botón en tema oscuro */
+  color: #b00020; /* Mantener el color rojo en el texto del botón */
+}

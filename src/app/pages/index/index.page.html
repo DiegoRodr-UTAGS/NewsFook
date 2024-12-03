@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar placeholder="Buscar noticia" (ionInput)="search($event)"></ion-searchbar>
+  <ion-list>
+    <ion-card *ngFor="let article of articles">
+      <ion-card-header>
+        <ion-card-title>{{ article.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ article.description }}</p>
+        <ion-button (click)="goView(article)">Ver más</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
